@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import StickyFooterCTA from "@/components/layout/StickyFooterCTA";
 import HeroBanner from "@/components/sections/HeroBanner";
 import ProgramIntro from "@/components/sections/ProgramIntro";
 import ProgramContent from "@/components/sections/ProgramContent";
@@ -25,6 +26,7 @@ export default function HomePage() {
 				<RegistrationForm />
 			</main>
 			<Footer />
+			<StickyFooterCTA />
 		</>
 	);
 }
