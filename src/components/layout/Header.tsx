@@ -39,7 +39,7 @@ export default function Header() {
 			<div className="container mx-auto flex items-center justify-between px-4 py-3">
 				{/* Logo */}
 				<a href="#" className="flex items-center">
-					<Image src="/brand/logo.png" alt="YUP Education" width={100} height={40} className="h-10 w-auto" />
+					<Image src="/brand/logo.png" alt="YUP Education" width={150} height={60} className="h-10 w-auto scale-150 origin-left" />
 				</a>
 
 				{/* Desktop links */}
@@ -53,12 +53,12 @@ export default function Header() {
 							{l.label}
 						</a>
 					))}
-					<a
+					{/* <a
 						href="#register"
 						className="bg-yup hover:bg-yup-dark rounded-full px-5 py-2 text-sm font-semibold text-white transition-colors"
 					>
 						Đăng ký ngay
-					</a>
+					</a> */}
 				</nav>
 
 				{/* Mobile toggle */}
