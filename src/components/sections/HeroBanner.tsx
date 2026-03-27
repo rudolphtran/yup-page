@@ -14,33 +14,31 @@ export default function HeroBanner() {
 							<span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-yup opacity-75" />
 							<span className="relative inline-flex h-2 w-2 rounded-full bg-yup" />
 						</span>
-						<span className="text-sm font-medium text-yup-dark">Chương trình đặc biệt 2026</span>
+						<span className="text-sm font-medium text-yup-dark">Hành trình 3 ngày chuyển hóa</span>
 					</div>
 
 					{/* Headline */}
-					<h1 className="animate-fade-in-up animation-delay-200 mb-6 text-5xl leading-tight font-extrabold tracking-tight text-gray-900 md:text-7xl lg:text-8xl">
-						<span className="text-gradient">10X</span> Your{" "}
-						<span className="relative">
-							Business
-							<svg
-								className="absolute -bottom-2 left-0 w-full"
-								viewBox="0 0 300 12"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M2 8C50 2 100 2 150 6C200 10 250 4 298 8"
-									stroke="#0b9444"
-									strokeWidth="3"
-									strokeLinecap="round"
-								/>
-							</svg>
-						</span>
+					<h1 className="animate-fade-in-up animation-delay-200 mb-4 text-4xl leading-tight font-extrabold tracking-tight text-gray-900 md:text-6xl lg:text-7xl">
+						<span className="text-gradient">10X</span> Your Biz
 					</h1>
 
+					<p className="animate-fade-in-up animation-delay-300 mb-8 text-xl font-semibold text-gray-800 md:text-2xl">
+						Kiến tạo sự tự do và bứt phá đích thực
+					</p>
+
 					{/* Subtitle */}
-					<p className="animate-fade-in-up animation-delay-400 mx-auto mb-8 max-w-2xl text-lg text-gray-600 md:text-xl">
-						Chương trình đào tạo chuyên sâu giúp doanh nghiệp <strong className="text-gray-900">tăng trưởng đột phá gấp 10 lần</strong> với chiến lược bài bản và đội ngũ chuyên gia hàng đầu.
+					<p className="animate-fade-in-up animation-delay-400 mx-auto mb-4 max-w-2xl text-lg leading-relaxed text-gray-600 md:text-xl">
+						Giữa những guồng quay không ngừng nghỉ của công việc, đã bao giờ bạn dừng lại và tự hỏi:{" "}
+						<strong className="text-gray-900">
+							Liệu mình đang thực sự làm chủ doanh nghiệp, hay đang vô tình trở thành người làm thuê mẫn cán nhất cho chính đứa con tinh thần của mình?
+						</strong>
+					</p>
+
+					<p className="animate-fade-in-up animation-delay-400 mx-auto mb-10 max-w-2xl text-base leading-relaxed text-gray-600 md:text-lg">
+						Hành trình 3 ngày &ldquo;10X YOUR BIZ&rdquo; không phải là nơi hướng dẫn bạn cách làm việc nhiều hơn để kiếm thêm tiền. Đây là khoảng không gian để bạn đập bỏ lối mòn của sự cật lực, sắp xếp lại tâm thức và nhận ra rằng:{" "}
+						<strong className="text-gray-900">
+							Sự bứt phá gấp 10 lần (10X) đôi khi lại nhẹ nhàng và tĩnh tại hơn rất nhiều so với việc cố gắng đạt KPI áp lực hiện tại.
+						</strong>
 					</p>
 
 					{/* CTA */}
@@ -55,26 +53,11 @@ export default function HeroBanner() {
 							</svg>
 						</a>
 						<a
-							href="#content"
+							href="#audience"
 							className="inline-flex items-center gap-2 rounded-full border-2 border-gray-300 px-8 py-4 text-lg font-semibold text-gray-700 transition-all hover:border-yup hover:text-yup"
 						>
-							Xem chi tiết
+							Tìm hiểu thêm
 						</a>
-					</div>
-
-					{/* Stats */}
-					<div className="animate-fade-in-up animation-delay-800 mt-16 grid grid-cols-2 gap-8 md:grid-cols-4">
-						{[
-							{ value: "500+", label: "Doanh nghiệp đã tham gia" },
-							{ value: "95%", label: "Hài lòng sau khóa học" },
-							{ value: "10X", label: "Tăng trưởng trung bình" },
-							{ value: "50+", label: "Chuyên gia đồng hành" },
-						].map((stat) => (
-							<div key={stat.label} className="text-center">
-								<div className="text-gradient text-3xl font-extrabold md:text-4xl">{stat.value}</div>
-								<div className="mt-1 text-sm text-gray-500">{stat.label}</div>
-							</div>
-						))}
 					</div>
 				</div>
 			</div>
