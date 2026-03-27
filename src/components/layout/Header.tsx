@@ -1,12 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const navLinks = [
-	{ label: "Giới thiệu", href: "#intro" },
-	{ label: "Nội dung", href: "#content" },
-	{ label: "Lịch trình", href: "#schedule" },
-	{ label: "Giảng viên", href: "#instructors" },
+	{ label: "Dành cho ai", href: "#audience" },
+	{ label: "Hành trình 3 ngày", href: "#content" },
+	{ label: "Giá trị mang về", href: "#values" },
 	{ label: "Đăng ký", href: "#register" },
 ];
 
@@ -38,9 +38,8 @@ export default function Header() {
 			{/* Main nav */}
 			<div className="container mx-auto flex items-center justify-between px-4 py-3">
 				{/* Logo */}
-				<a href="#" className="flex items-center gap-2">
-					<span className="text-yup text-2xl font-extrabold tracking-tight">YUP</span>
-					<span className="hidden text-sm font-medium text-gray-600 sm:inline">Education</span>
+				<a href="#" className="flex items-center">
+					<Image src="/brand/logo.png" alt="YUP Education" width={100} height={40} className="h-10 w-auto" />
 				</a>
 
 				{/* Desktop links */}

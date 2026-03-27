@@ -13,14 +13,40 @@ const revenueOptions = [
 export default function RegistrationForm() {
 	const [submitted, setSubmitted] = useState(false);
 	const [loading, setLoading] = useState(false);
+	const [error, setError] = useState("");
 
 	async function handleSubmit(e: FormEvent<HTMLFormElement>) {
 		e.preventDefault();
 		setLoading(true);
-		// Simulate submission — replace with actual API call
-		await new Promise((r) => setTimeout(r, 1500));
-		setLoading(false);
-		setSubmitted(true);
+		setError("");
+
+		const formData = new FormData(e.currentTarget);
+		const data = {
+			fullName: formData.get("fullName"),
+			phone: formData.get("phone"),
+			email: formData.get("email"),
+			industry: formData.get("industry"),
+			revenue: formData.get("revenue"),
+		};
+
+		try {
+			const res = await fetch("/api/registrations", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify(data),
+			});
+
+			if (!res.ok) {
+				const body = await res.json();
+				throw new Error(body.error || "Đã có lỗi xảy ra");
+			}
+
+			setSubmitted(true);
+		} catch (err) {
+			setError(err instanceof Error ? err.message : "Đã có lỗi xảy ra, vui lòng thử lại.");
+		} finally {
+			setLoading(false);
+		}
 	}
 
 	return (
@@ -37,10 +63,10 @@ export default function RegistrationForm() {
 						Đăng ký tham gia
 					</span>
 					<h2 className="mb-4 text-3xl font-extrabold text-white md:text-5xl">
-						Sẵn sàng <span className="text-gradient">10X</span> doanh nghiệp?
+						Sẵn sàng bắt đầu hành trình <span className="text-gradient">10X YOUR BIZ?</span>
 					</h2>
 					<p className="text-lg text-gray-400">
-						Điền thông tin bên dưới để đăng ký tham gia chương trình. Đội ngũ YUP sẽ liên hệ xác nhận trong vòng 24 giờ.
+						Hãy cho phép bản thân được dừng lại để nhìn rõ hơn con đường phía trước. Điền thông tin bên dưới, đội ngũ YUP sẽ liên hệ xác nhận trong vòng 24 giờ.
 					</p>
 				</div>
 
@@ -163,6 +189,12 @@ export default function RegistrationForm() {
 							<p className="text-center text-xs text-gray-500">
 								Thông tin của bạn được bảo mật và chỉ sử dụng cho mục đích liên hệ.
 							</p>
+
+							{error && (
+								<p className="rounded-lg bg-red-500/10 px-4 py-2 text-center text-sm text-red-400">
+									{error}
+								</p>
+							)}
 						</form>
 					)}
 				</div>

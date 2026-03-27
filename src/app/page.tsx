@@ -5,13 +5,12 @@ import HeroBanner from "@/components/sections/HeroBanner";
 import ProgramIntro from "@/components/sections/ProgramIntro";
 import ProgramContent from "@/components/sections/ProgramContent";
 import Schedule from "@/components/sections/Schedule";
-import Instructors from "@/components/sections/Instructors";
 import RegistrationForm from "@/components/sections/RegistrationForm";
 
 export const metadata: Metadata = {
-	title: "10X Your Business | YUP Education",
+	title: "10X Your Biz: Kiến tạo sự tự do và bứt phá đích thực | YUP Education",
 	description:
-		"Chương trình đào tạo chuyên sâu giúp doanh nghiệp tăng trưởng đột phá gấp 10 lần với chiến lược bài bản và đội ngũ chuyên gia hàng đầu.",
+		"Hành trình 3 ngày chuyển hóa tâm thức lãnh đạo — giúp bạn bứt phá gấp 10 lần một cách nhẹ nhàng và tĩnh tại, không phải bằng sự cật lực.",
 };
 
 export default function HomePage() {
@@ -23,7 +22,6 @@ export default function HomePage() {
 				<ProgramIntro />
 				<ProgramContent />
 				<Schedule />
-				<Instructors />
 				<RegistrationForm />
 			</main>
 			<Footer />
